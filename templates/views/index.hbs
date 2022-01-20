@@ -2,14 +2,83 @@
 
 <html>
     <head>
-        <title>Weather</title>
-        <link rel="icon" href="/img/weather.png">
-        <link rel="stylesheet" href="/css/styles.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Weather</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://kit.fontawesome.com/9b29e8dead.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+      <link rel="icon" href="/img/weather.png">
+      <link rel="stylesheet" href="/css/styles.css">
         
     </head>
 
     <body>
-        <div class="main-content">
+        <div class="container-fluid px-1 px-sm-3 py-5 mx-auto">
+          <div class="row d-flex justify-content-center">
+            <div class="row card0">
+              <div class="card1 col-lg-8 col-md-7">
+                <div class="text-center" id="wet-icon"> </div>
+                  {{!-- <img class="image mt-5" src="https://i.imgur.com/M8VyA2h.png"> </div> --}}
+                <div class="row px-3 mt-3 mb-3">
+                    <h1 id="wet-temp" class="large-font mr-3"></h1>
+                    <div class="d-flex flex-column mr-3">
+                        <h2 class="mt-3 mb-0"><p id="message-1"></p></h2>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <h3 class="mt-4"></h3> <p id="wet-desc"><small></small></p>
+                    </div>
+                </div>
+              </div>
+              <div class="card2 col-lg-4 col-md-5">
+                <div class="row px-3"> 
+                  
+                    <input type="text" name="Location" placeholder="Location" class="mb-5">
+                    <div id="check" class="fas fa-search mb-5 mr-0 text-center"></div>
+                  
+                </div>
+                <div class="mr-5">
+                    <p>Weather Details</p>
+                    <div class="row px-3">
+                        <p class="light-text">Max Temp</p>
+                        <p class="ml-auto" id="wet-max-temp"></p>
+                    </div>
+                    
+                    <div class="row px-3">
+                        <p class="light-text">Min Temp</p>
+                        <p class="ml-auto" id="wet-min-temp"></p>
+                    </div>
+                    <div class="row px-3">
+                        <p class="light-text">Feels Like
+                        <p class="ml-auto" id="wet-feels-temp"></p>
+                    </div>
+                    <div class="line my-5"></div>
+                    <div class="row px-3">
+                        <p class="light-text">Cloudy</p>
+                        <p class="ml-auto" id="wet-cloud"></p>
+                    </div>
+                    <div class="row px-3">
+                        <p class="light-text">Humidity</p>
+                        <p class="ml-auto" id="wet-humidity"></p>
+                    </div>
+                    <div class="row px-3">
+                        <p class="light-text">Pressure</p>
+                        <p class="ml-auto" id="wet-pressure"></p>
+                    </div>
+                    <div class="row px-3">
+                        <p class="light-text">Wind</p>
+                        <p class="ml-auto" id="wet-wind"></p>
+                    </div>
+                    <div class="line mt-3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {{!-- <div class="main-content">
             {{>header}}
 
             <p>Use this site to get your weather</p>
@@ -19,11 +88,22 @@
                 <button>Search</button>
             </form>
 
-            <p id="message-1"></p>
-            <p id="message-2"></p>
+            
+            
+        </div>
+        <div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+          <div class="row d-flex justify-content-center px-3">
+            <div class="card">
+                <h2 class="ml-auto mr-4 mt-3 mb-0"><p id="message-1"></p></h2>
+                <p class="ml-auto mr-4 mb-0 med-font" id="message-2"></p>
+                <h1 class="ml-auto mr-4 large-font">-20&#176;</h1>
+                <p class="time-font mb-0 ml-4 mt-auto">08:30 <span class="sm-font">AM</span></p>
+                <p class="ml-4 mb-4">Wednesday, 18 October 2019</p>
+            </div>
+          </div>
         </div>
 
-        {{>footer}}
+        {{>footer}} --}}
 
         <script src="/js/app.js"></script>
     </body>
